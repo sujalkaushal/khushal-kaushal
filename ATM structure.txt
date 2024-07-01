@@ -1,0 +1,166 @@
+import java.util.*;
+
+import javax.sound.sampled.SourceDataLine;
+public class ATM{
+    public static void main(String args []){
+
+    System.out.println(" Welcome on ATM Machine");
+  
+     System.out.println("1.  Banking");
+     System.out.println("2.  yono");
+
+     Scanner sc = new Scanner (System.in);
+     int var = sc.nextInt();
+    // Banking
+    switch (var){
+    case 1:  
+    System.out.println(" ");  
+    System.out.print("1.Withdrawal");
+    System.out.println("   2.FAST CASH");
+    System.out.println(" ");
+    System.out.println("3.CHECK BALANCE");
+
+    //1.withdrawal process
+    int press = sc.nextInt();
+    if(press == 1){
+        System.out.println(" ");
+        System.out.println("enter pin");
+        System.out.println(" ");
+        int pin = sc.nextInt();
+        if (pin == 1234){
+            System.out.println(" ");
+            System.out.println("enter amount");
+            System.out.println(" ");
+            int amount = sc.nextInt();
+
+        if ( amount<1000000){
+            System.out.println(" ");
+            System.out.println("Withdrawal successfull, Take money = " + amount);
+        }
+        else {
+            System.out.println("Insifficient balance");
+        }
+
+        int curramount = 1000000-amount;
+        System.out.println("Current amount = " + curramount);
+        }
+        else  {
+                System.out.println("wrong");
+        }
+           
+    }
+
+    //2.fast cash process 
+    else if (press == 2){
+        System.out.println(" ");
+        System.out.print("1. 500");
+        System.out.println("     2. 1000");
+        System.out.print("3. 2000");
+        System.out.println("    4. 4000");
+    
+       int press2 = sc.nextInt();
+
+       if (1 == press2){
+        System.out.println(" ");
+        System.out.println("enter pin");
+        System.out.println(" ");
+        int pin2 = sc.nextInt();
+        if(pin2 == 1234){
+            System.out.println(" ");
+            System.out.println("Fast cash withdrawal successfull, Take amount 500");
+        }
+            else{
+                System.out.println("wrong pin");
+            }
+        }
+
+        else if (2 == press2){
+            System.out.println(" ");
+            System.out.println("enter pin");
+            System.out.println(" ");
+            int pin3 = sc.nextInt();
+            if(pin3 == 1234){
+                System.out.println("Fast cash withdrawal successfull, Take amount 1000");
+
+            }
+            else {
+                System.out.println("Wrong pin");
+            }
+        }
+
+        else if (3 == press2){
+            System.out.println(" ");
+            System.out.println("enter pin");
+            System.out.println(" ");
+            int pin3 = sc.nextInt();
+            if(pin3 == 1234){
+                System.out.println("Fast cash withdrawal successfull, Take amount 2000");
+
+            }
+            else {
+                System.out.println("Wrong pin");
+            }
+        }
+
+        else if (4 == press2){
+            System.out.println(" ");
+            System.out.println("enter pin");
+            System.out.println(" ");
+            int pin3 = sc.nextInt();
+            if(pin3 == 1234){
+                System.out.println("Fast cash withdrawal successfull, Take amount 4000");
+
+            }
+            else {
+                System.out.println("Wrong pin");
+            }
+        }
+
+        else{
+            System.out.println("Wrong selection");
+        }
+
+    }
+
+    //Check balance process
+    else if (press == 3){
+
+        System.out.println(" ");
+        System.out.println("enter your pin");
+
+        int pin4 = sc.nextInt();
+        
+        if(pin4 == 1234){
+            System.out.println(" ");
+            System.out.println("Balance = 1000000");
+        }
+        else {
+            System.out.println("wrong pin ");
+        }
+      
+    }
+
+    else {
+        System.out.println(" ");
+        System.out.println("wrong selection");
+
+      }
+   
+    break;
+
+    case 2:
+    System.out.println(" ");
+    System.out.println("Currently not available");
+    break;
+    
+   default:
+   System.out.println(" ");
+   System.out.println("Wrong selection retry");
+}
+    }
+    }
+   
+    
+
+
+
